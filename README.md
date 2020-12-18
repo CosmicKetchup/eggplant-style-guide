@@ -122,8 +122,9 @@ systems/
   - `put (10 + 2) * 5 into myResult`
 
 ### Models
-- when moving models into production automation capacity, export and store within `Models/` directory within project
-- rename exported file to include a date in ISO-8601 format
+- when moving a model into a production capacity, export and store it within the `Models/` directory of the associated suite, alongside the `Scripts/` and `Images/` folders
+  - this folder _may_ need to be created if you're backing up the model for the first time
+- rename exported file to include the backup date in [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html) format
   - `<model-name>-YYYYMMDD.json`
 
 ---
@@ -136,12 +137,12 @@ systems/
 - use brackets `[]` for lists and braces `{}` for property lists
     - though it is possible, do not substitute these for parentheses
 - if a conditional statement and subsequent internal expression is short enough, you may use the `then` keyword and limit the full expression to a single line
-  - `if imageFound("cart_button") then click foundImageLocation`
+  - `if imageFound("cart_button") then click foundImageLocation()`
 - repeat loop iterators should **always** be named
   - the use of `it` is not permitted
 - if calling another script that is nested in a folder, use double angle brackets
-  - ✅ `<<systems/windows>>.taskbarRectangle()`
-  - ❌ `"systems/windows".taskbarRectangle()`
+  - <font color="green">✓</font> `<<systems/windows>>.taskbarRectangle()`
+  - <font color="red">✘</font> `"systems/windows".taskbarRectangle()`
 - if the contents of a multiline property list should grow too large, then it should be partitioned and clearly defined with section titles
   - each section title should prepend three hash symbols
   - each section should include two blank lines between it and the next section
