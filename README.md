@@ -46,6 +46,7 @@ Using a descriptive and consistent naming convention will ensure that your codeb
 
 ### Handlers
 - use `camelCase`
+- adding text for the workflow example
 
 ### Variables
 - use `camelCase`
